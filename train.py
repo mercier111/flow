@@ -10,7 +10,7 @@ from dataset import trainset
 from network import Net
 
 #################  settings  #############
-batch_size = 100
+batch_size = 64
 max_epochs = 5
 cuda = True 
 disp_interval = 50000
