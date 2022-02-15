@@ -15,7 +15,7 @@ max_epochs = 5
 cuda = True 
 disp_interval = 50000
 max_iter = 250000
-lr = 0.01
+lr = 0.001
 iters_per_epoch = max_iter
 checkpoint_interval = 1
 output_dir = "save/"
@@ -58,7 +58,7 @@ for epoch in range(1, max_epochs + 1):
         
 
         net.zero_grad()
-        mse_loss = net(input, output)
+        pred, mse_loss = net(input, output)
 
         loss = mse_loss
         loss_temp += loss.item()
